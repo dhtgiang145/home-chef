@@ -1,0 +1,158 @@
+[
+  {
+    "chefid": 1,
+    "chefname": "Kevin",
+    "chefspecialty": "Italian Foods",
+    "chefratings": 4,
+    "chefmenus": [
+      {
+        "id": 1,
+        "image": "./images/avocado-salad.jpg",
+        "desc": "Refreshing salad with avocado",
+        "price": 15,
+        "ratings": 5,
+        "value": 0
+      },
+      {
+        "id": 2,
+        "image": "./images/pasta.jpg",
+        "desc": "Pesto pasta",
+        "price": 12,
+        "ratings": 4.5,
+        "value": 0
+      },
+      {
+        "id": 3,
+        "image": "./images/steak.jpg",
+        "desc": "Delicious steak",
+        "price": 12,
+        "ratings": 4.5,
+        "value": 0
+      }
+    ],
+    "chefreviews": [
+      {
+        "userid": 1,
+        "username": "Betty Logan",
+        "userreview": "I ordered the steak dinner and was really happy with it."
+      }
+    ]
+  },
+  {
+    "chefid": 2,
+    "chefname": "Sarah",
+    "chefspecialty": "Eastern and Western creative foods",
+    "chefratings": 3.5,
+    "chefmenus": [
+      {
+        "id": 1,
+        "image": "./images/beet-salad.jpg",
+        "desc": "Beet salad with cutie toppings",
+        "price": 14,
+        "ratings": 4.5,
+        "value": 0
+      },
+      {
+        "id": 2,
+        "image": "./images/dumplings.jpg",
+        "desc": "Home-made steam dumplings",
+        "price": 10,
+        "ratings": 4.5,
+        "value": 0
+      },
+      {
+        "id": 3,
+        "image": "./images/scallops.jpg",
+        "desc": "Scallops with garlic sage browned butter",
+        "price": 15,
+        "ratings": 4,
+        "value": 0
+      }
+    ],
+    "chefreviews": [
+      {
+        "userid": 4,
+        "username": "Katy Ng",
+        "userreview": "The beet salad is really bomb, would order again from Sarah."
+      }
+    ]
+  },
+  {
+    "chefid": 3,
+    "chefname": "Ray",
+    "chefspecialty": "South East Asian foods",
+    "chefratings": 5,
+    "chefmenus": [
+      {
+        "id": 1,
+        "image": "./images/pho.jpg",
+        "desc": "Vietnamese Pho with rare beef",
+        "price": 13,
+        "ratings": 5,
+        "value": 0
+      },
+      {
+        "id": 2,
+        "image": "./images/shrimp-salad.jpg",
+        "desc": "Shrimp-salad",
+        "price": 15,
+        "ratings": 5,
+        "value": 0
+      },
+      {
+        "id": 3,
+        "image": "./images/pork-chop.jpg",
+        "desc": "Pan-fried pork chop",
+        "price": 12,
+        "ratings": 4.5,
+        "value": 0
+      }
+    ],
+    "chefreviews": [
+      {
+        "userid": 2,
+        "username": "Sofia Rodrick",
+        "userreview": "Ray is one of the best home chefs, his pho reminds me of the authentic bowl I had when travelling to Vietnam"
+      }
+    ]
+  },
+  {
+    "chefid": 4,
+    "chefname": "Miyaki",
+    "chefspecialty": "Japanese foods",
+    "chefratings": 4.5,
+    "chefmenus": [
+      {
+        "id": 1,
+        "image": "./images/ramen.jpg",
+        "desc": "Ramen noodle",
+        "price": 13,
+        "ratings": 4.5,
+        "value": 0
+      },
+      {
+        "id": 2,
+        "image": "./images/chicken-teriyaki.jpg",
+        "desc": "Chicken Teriyaki",
+        "price": 15,
+        "ratings": 5,
+        "value": 0
+      },
+      {
+        "id": 3,
+        "image": "./images/curry.jpg",
+        "desc": "Spicy curry",
+        "price": 12,
+        "ratings": 4,
+        "value": 0
+      }
+    ],
+    "chefreviews": [
+      {
+        "userid": 3,
+        "username": "Kenshin T.",
+        "userreview": "The curry was good but a little bit too spicy for me, will try the ramen next time"
+      }
+    ]
+  }
+]

@@ -4,6 +4,7 @@
     "chefname": "Kevin",
     "chefspecialty": "Italian Foods",
     "chefratings": 4,
+    "chefavatar": "./images/Kevin.png",
     "chefmenus": [
       {
         "id": 1,
@@ -43,6 +44,7 @@
     "chefname": "Sarah",
     "chefspecialty": "Eastern and Western creative foods",
     "chefratings": 3.5,
+    "chefavatar": "./images/Sarah.png",
     "chefmenus": [
       {
         "id": 1,
@@ -82,6 +84,7 @@
     "chefname": "Ray",
     "chefspecialty": "South East Asian foods",
     "chefratings": 5,
+    "chefavatar": "./images/Ray.png",
     "chefmenus": [
       {
         "id": 1,
@@ -121,6 +124,7 @@
     "chefname": "Miyaki",
     "chefspecialty": "Japanese foods",
     "chefratings": 4.5,
+    "chefavatar": "./images/Miyaki.png",
     "chefmenus": [
       {
         "id": 1,

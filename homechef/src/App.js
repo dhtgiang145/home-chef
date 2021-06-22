@@ -4,18 +4,31 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Components/Home";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import Menus from "./Components/Menus";
+// import Menus from "./Components/Menus";
 import Cart from "./Components/Cart";
-import { chefs } from "./menus.js";
 import ManageChefList from "./Components/Admin";
+import UserViewChefList from "./Components/UserViewMenu";
+// Global use of fontawesome
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+
+// Library Creation
+library.add(fas);
 
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: chefs,
+      chefs:[],
+      isLoading: true
     };
+  }
+  componentDidMount() {
+    this.setState({ isLoading: true });
+    fetch("api/chefs")
+      .then((response) => response.json())
+      .then((data) => this.setState({ chefs: data, isLoading: false }));
   }
   render() {
     return (
@@ -24,15 +37,15 @@ class App extends Component {
           <Header />
           <Switch>
             <Route exact path="/">
-              <Home chefs={this.state.data} />
+              <Home chefs={this.state.chefs} />
             </Route>
             <Route exact path="/menus">
-              <Menus />
+              <UserViewChefList />
             </Route>
             <Route exact path="/cart">
               <Cart />
             </Route>
-            <Route path="/chefs" exact="true" component={ManageChefList} />
+            <Route exact path="/chefs" component={ManageChefList} />
           </Switch>
           <Footer />
         </div>

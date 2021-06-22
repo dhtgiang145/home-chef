@@ -21,3 +21,8 @@ img {
 ul {
   list-style: none;
 }
+
+#chefavatar {
+  width: 8em;
+  height: auto;
+}

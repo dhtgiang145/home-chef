@@ -39,7 +39,7 @@ class UserViewChefList extends Component {
             <ul className="d-flex">
               {chef.chefmenus.map((item)=> <li className="flex-row" key={item.id}>
                 <p>{item.desc}</p>
-                <img src={item.image} alt="menu"></img>
+                <img id="footimage" src={item.image} alt="menu"></img>
                 <p>{item.value}</p>
                 <button>-</button>
                 <button>+</button>

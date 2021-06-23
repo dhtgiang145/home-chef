@@ -7,6 +7,7 @@ const MenuSchema = new mongoose.Schema({
   price: Number,
   ratings: Number,
   value: Number,
+  ordered: Number,
 });
 
 const ReviewSchema = new mongoose.Schema({
@@ -19,8 +20,8 @@ const ChefSchema = new mongoose.Schema({
   chefname: String,
   chefspecialty: String,
   chefratings: Number,
-  chefmenus: { type: [MenuSchema], require:false },
-  chefreviews: {type: [ReviewSchema],require:false},
+  chefmenus: { type: [MenuSchema], require: false },
+  chefreviews: { type: [ReviewSchema], require: false },
 });
 
 module.exports = mongoose.model("Chef", ChefSchema);

@@ -1,9 +1,21 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const expressSession = require("express-session")({
+  secret: "secret",
+  resave: "false",
+  saveUninitialized: "false"
+  })
 app.use(bodyParser.json());
-require("./app/models/chefs.model.js");
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(expressSession)
 
+const passport = require("passport");
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+require("./app/models/chefs.model.js");
 require("dotenv").config();
 const mongoose = require("mongoose");
 
@@ -19,6 +31,11 @@ mongoose.connection
   .on("error", (err) => {
     console.log(`Connection error: ${err.message}`);
   });
+
+const Chef =  mongoose.model("Chef");
+passport.use(Chef.createStrategy());
+passport.serializeUser(Chef.serializeUser());
+passport.deserializeUser(Chef.deserializeUser());
 
 require("./app/routes/chefs.router.js")(app);
 

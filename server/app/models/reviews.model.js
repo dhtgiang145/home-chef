@@ -4,7 +4,7 @@ const ReviewSchema = new mongoose.Schema({
    username: String,
    author: String,
    chef: {
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: 'ChefSchema',
       required: true
    }

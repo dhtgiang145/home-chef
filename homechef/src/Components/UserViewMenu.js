@@ -1,9 +1,5 @@
-import React, { Component } from "react";
-import {
-  Container,
-  ListGroup,
-  ListGroupItem,
-} from "reactstrap";
+import React, {Component} from "react";
+import { Container, ListGroup, ListGroupItem } from "reactstrap";
 
 class UserViewChefList extends Component {
   constructor(props) {
@@ -19,6 +15,18 @@ class UserViewChefList extends Component {
       .then((response) => response.json())
       .then((data) => this.setState({ chefs: data, isLoading: false }));
   }
+  increaseQty = (addvalue) => {
+    if (addvalue.value < 10) {
+      const updatedValue = addvalue.value++;
+      this.setState({ updatedValue });
+    }
+  };
+  decreaseQty = (decvalue) => {
+    if (decvalue.value > 0) {
+      const updatedValue = decvalue.value--;
+      this.setState({ updatedValue });
+    }
+  };
   render() {
     const { chefs, isLoading } = this.state;
     if (isLoading) {
@@ -36,14 +44,20 @@ class UserViewChefList extends Component {
             <p>{chef.chefspecialty}</p>
           </section>
           <section>
-            <ul className="d-flex">
-              {chef.chefmenus.map((item)=> <li className="flex-row" key={item.id}>
-                <p>{item.desc}</p>
-                <img id="footimage" src={item.image} alt="menu"></img>
-                <p>{item.value}</p>
-                <button>-</button>
-                <button>+</button>
-              </li>)}
+            <ul className="d-flex flex-row">
+              {chef.chefmenus.map((item) => (
+                <li className="w-50" key={item.id}>
+                  <p>{item.desc}</p>
+                  <img id="footimage" src={item.image} alt="menu"></img>
+                  <p>{item.value}</p>
+                  <button onClick={() => this.decreaseQty(item)}>
+                    -
+                  </button>
+                  <button onClick={() => this.increaseQty(item)}>
+                    +
+                  </button>
+                </li>
+              ))}
             </ul>
           </section>
         </ListGroupItem>
@@ -60,3 +74,4 @@ class UserViewChefList extends Component {
 }
 
 export default UserViewChefList;
+

@@ -5,6 +5,7 @@
     "chefspecialty": "Italian Foods",
     "chefratings": 4,
     "chefavatar": "./images/Kevin.png",
+    "password": "dfb949667e3483148677364affc60804",
     "chefmenus": [
       {
         "id": 1,
@@ -48,6 +49,7 @@
     "chefspecialty": "Eastern and Western creative foods",
     "chefratings": 3.5,
     "chefavatar": "./images/Sarah.png",
+    "password": "749777dc79564b8945c77c67266b13c0",
     "chefmenus": [
       {
         "id": 1,
@@ -91,6 +93,7 @@
     "chefspecialty": "South East Asian foods",
     "chefratings": 5,
     "chefavatar": "./images/Ray.png",
+    "password": "681ff7e692dce250bcdd324308b640cf",
     "chefmenus": [
       {
         "id": 1,
@@ -134,6 +137,7 @@
     "chefspecialty": "Japanese foods",
     "chefratings": 4.5,
     "chefavatar": "./images/Miyaki.png",
+    "password": "2674a3766cc4d23d4e26425e339c93eb",
     "chefmenus": [
       {
         "id": 1,

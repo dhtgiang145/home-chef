@@ -30,6 +30,7 @@ class App extends Component {
       .then((response) => response.json())
       .then((data) => this.setState({ chefs: data, isLoading: false }));
   }
+
   render() {
     return (
       <Router>

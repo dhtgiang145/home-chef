@@ -33,9 +33,9 @@ mongoose.connection
   });
 
 const Chef =  mongoose.model("Chef");
-passport.use(Chef.createStrategy());
-passport.serializeUser(Chef.serializeUser());
-passport.deserializeUser(Chef.deserializeUser());
+// passport.use(Chef.createStrategy());
+// passport.serializeUser(Chef.serializeUser());
+// passport.deserializeUser(Chef.deserializeUser());
 
 require("./app/routes/chefs.router.js")(app);
 
